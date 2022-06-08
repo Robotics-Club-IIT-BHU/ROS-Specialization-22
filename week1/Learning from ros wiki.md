@@ -94,7 +94,7 @@ int64 b
 int64 sum
 ```
 
-These messages are sent and recieved inside individual nodes using a mechanism called as **Publisher** which sends message to the **master**, And **Subscriber** which subscribes the message from master in a **Asynchornous** fashion using callbacks For understanding them check out the tutorials (we generally prefer c++ but you can choose to do the tutorials in python).
+These messages are sent and recieved inside individual nodes using a mechanism called as **Publisher** which sends message to the **ros master**, And **Subscriber** which subscribes the message from master in a **Asynchronous** fashion using callbacks For understanding them check out the tutorials (Try to do the tutorials both in C++ and Python. Its easier to write the code in Python but for real applications C++ runs faster and is lightweight).
 
 - Msg and Srv [Tutorial](http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv)
 - Publisher and Subscriber [Tutorial](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29) and [Run](http://wiki.ros.org/ROS/Tutorials/ExaminingPublisherSubscriber)
