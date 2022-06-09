@@ -2,19 +2,21 @@
 for people who are familiar with basic linux commands can follow along easily, if not then go through this [maker's basic linux command tutorial for beginners](https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners) all the basic commands from `pwd` to `locate`
 
 after that there are a few commands and things that comes in handy which you should consider learning
-### AutoCompletion
+### AutoCompletion (Very very useful)
 While command length gets longer and more complicated to remember linux helps to autocomplete them
 ```bash
 $ roslau
-## This is not a complete command but tap `TAB` twice
+## This is not a complete command but tap `TAB` once
 $ roslaunch
-## it gets completed
+## it gets completed  
+
 ## Also completes file and directory name
 $ cd ~/catkin_ws/
 ## `TAB` twice you will be listed with the the files and folders in it
-build/ devel/ src/ logs/
+build/ devel/ src/ logs/  
+
 $ cd ~/catkin_ws/bu
-## `TAB` twice now fills the most suitable one aswell
+## `TAB`once now fills the most suitable one aswell
 $ cd ~/catkin_ws/build
 ```
 
@@ -23,12 +25,23 @@ $ cd ~/catkin_ws/build
 $ cp -r dir1/ dir2    ## copies the whole directory dir1 into a new directory dir2
 $ cp -r dir1/ dir3/   ## copies the whole directory dir1 into into dir3/dir1
 ```
-### Change Executable Permission
-Any file doesnt have access to run or execute or could be Read-only to change this we use `chmod`
+### Change Executable Permission (Necessary for python scripts)
+Any file doesn't have access to run or execute or could be Read-only to change this we use `chmod`
 ```bash
 $ chmod +x run.py     ## Adds execution rights to the file
 $ chmod +a hist.log   ## Adds permission to the current user to edit the files
-```
+```  
+### Some quick shortcuts  
+- UP arrow (last command)
+- CTRL+ALT+T (New Terminal window)
+- CTRL+SHIFT+T (New Terminal Tab in same window)
+- CTRL+R (Reverse search lookup any command you ran in the past :) has a limit though)
+- CTRL+E (Takes cursor to end of line)
+- CTRL+A (Cursor to start of line)
+- CTRL+U (Clears line before cursor)
+- CTRL+K (Clears line after cursor)
+- CTRL+W (Clears upto start of last word before cursor)
+
 ### BashRC
 So for things that you have to always run when you open your terminal you can save it in bashrc which helps you reuse them either as a Variable, Function or boot_scripts.
 ```bash
@@ -44,7 +57,7 @@ alias envon='function _envon(){ source ${PWD}/$1/bin/activate;};_envon'
 alias cb='codeblocks'
 ## Another macros to run codeblocks with command `cb`
 ```
-Add your favourates to it and make it the most productive experience
+Add your favourites to it and make it the most productive experience
 
 ### Grep
 Now after learning to locate a file with patterns with `locate` its time to get patterns inside files
