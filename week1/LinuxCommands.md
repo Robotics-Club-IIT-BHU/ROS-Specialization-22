@@ -36,6 +36,8 @@ $ chmod +a hist.log   ## Adds permission to the current user to edit the files
 - CTRL+ALT+T (New Terminal window)
 - CTRL+SHIFT+T (New Terminal Tab in same window)
 - CTRL+R (Reverse search lookup any command you ran in the past :) has a limit though)
+- CTRL+C (To stop execution of current command)
+- CTRL+Z (If CTRL+C fails this forcefully stops it but it stills runs in the backrground)(To kill it forever use px|aux grep)
 - CTRL+E (Takes cursor to end of line)
 - CTRL+A (Cursor to start of line)
 - CTRL+U (Clears line before cursor)
