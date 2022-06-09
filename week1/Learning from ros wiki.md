@@ -44,6 +44,11 @@ Now one can also access this pkg from anywhere using ros commands
 ```bash
 $ roscd camp
 ```
+
+To know what the CMakeLists.txt and package.xml does check this out [CMakeLists.txt](http://wiki.ros.org/catkin/CMakeLists.txt) and [package.xml](http://wiki.ros.org/catkin/package.xml)  
+These will always be auto-generated but if you are using additonal dependencies/compiling cpp files you will have to make some changes in them as shown in the below tutorials.  
+<br>
+<br>
 Now there are just **Seven** basic important things to learn and you will never struggle thereafter
 - Nodes
 - Topics
@@ -52,6 +57,7 @@ Now there are just **Seven** basic important things to learn and you will never 
 - Publisher
 - Subscriber
 - Launch files
+<br>  
 
 ### Nodes,Topics and Services
 
@@ -60,10 +66,12 @@ Now there are just **Seven** basic important things to learn and you will never 
 Basically there are central nodes called **master** that collects all the new messages and distributes them within nodes. Basically **Messages** are feed or reading from sensors or useful information from some device/program called **Nodes**.<br/>
 **Services** compared to messages just doesnt collect or send to one node but a trasaction of information takes place. Basically it is so that a node asks the other node to do something (could be to solve a mathematical problem, or Move the motors or turn on siren) And after that is completed the other node sends a confirmation or results. This Forward and backward motion of Information is termed as **Request** (one who asks for something) and **Response** (after processing the request).
 
-For understanding them better we recommend you to follow the Tutorial by ROS:
+For understanding them better we recommend you to follow the Tutorial by ROS (follow the steps and play with the simulation):
 - Nodes [Tutorial](http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes)
-- Topics [Tutotial](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
+- Topics [Tutorial](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
 - Services [Tutorial](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams)
+  
+<br>  
 
 ### Messages and Srv files
 These Topics and  Services have there own Data type called `msg` and `srv` to handle the communication effectively and robustly
@@ -94,13 +102,23 @@ int64 b
 int64 sum
 ```
 
-These messages are sent and recieved inside individual nodes using a mechanism called as **Publisher** which sends message to the **ros master**, And **Subscriber** which subscribes the message from master in a **Asynchronous** fashion using callbacks For understanding them check out the tutorials (Try to do the tutorials both in C++ and Python. Its easier to write the code in Python but for real applications C++ runs faster and is lightweight).
+These messages are sent and recieved inside individual nodes using a mechanism called as **Publisher** which sends message to the **ros master**, And **Subscriber** which subscribes the message from master in a **Asynchronous** fashion using callbacks.  
+
+The publisher publishes a value on a topic which is intercepted by an infinite loop in the subscriber and a callback function is then executed every time a message is received. For understanding them check out the tutorials. 
+  
+  
+**(Try to do the tutorials both in C++ and Python. Its easier to write the code in Python but for real applications C++ runs faster and is lightweight)**.
 
 - Msg and Srv [Tutorial](http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv)
 - Publisher and Subscriber [Tutorial](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29) and [Run](http://wiki.ros.org/ROS/Tutorials/ExaminingPublisherSubscriber)
-- Service Server and Client [Tutorial](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28c%2B%2B%29) and [Run](http://wiki.ros.org/ROS/Tutorials/ExaminingServiceClient)
+- Service Server and Client [Tutorial](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28c%2B%2B%29) and [Run](http://wiki.ros.org/ROS/Tutorials/ExaminingServiceClient)  
+<br>  
 
 ### Launch
-Basically all your nodes are spawned by executing them but what if there are many nodes to launch we use a set of rules to launch them and using `roslaunch`
+Basically all the nodes/scripts that you write are spawned by executing them but what if there are many such nodes to launch ? 
+  
+
+It will be too cumbersome to open so many terminals and execute them one by one. Instead we use what is called a **launch file**.  
+This will automate spawning each node and now you will just be executing one command.
 
 You can directly checkout its implementation here. [Tutorial](http://wiki.ros.org/ROS/Tutorials/UsingRqtconsoleRoslaunch#Using_roslaunch)
