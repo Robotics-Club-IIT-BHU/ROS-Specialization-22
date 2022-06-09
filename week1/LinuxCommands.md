@@ -1,7 +1,8 @@
 ## Some Useful Linux Commands
-for people who are familiar with basic linux commands can follow along easily, if not then go through this [maker's basic linux command tutorial for beginners](https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners) all the basic commands from `pwd` to `locate`
+For people who are familiar with basic linux commands can follow along easily, if not then go through this  
+[maker's basic linux command tutorial for beginners](https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners) all the basic commands from `pwd` to `locate`
 
-after that there are a few commands and things that comes in handy which you should consider learning
+After that there are a few commands and things that comes in handy which you should learn  
 ### AutoCompletion (Very very useful)
 While command length gets longer and more complicated to remember linux helps to autocomplete them
 ```bash
