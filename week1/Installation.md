@@ -9,9 +9,10 @@ Also, do check out this video demonstration to get an easier understanding of in
 [ROS Noetic Installation and Path Sourcing](https://youtu.be/PowY8dV36DY)
 
 •	For everyone else, use 
-[VirtualBox]()
+[VirtualBox](https://www.virtualbox.org/)
 
-## Creating a catkin workspace environment (ROS WiKi Managing Environment)
+## Creating a catkin workspace environment 
+[ROS WiKi Managing Environment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
 
 **Commands to run in terminal:**
 
