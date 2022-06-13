@@ -11,4 +11,4 @@ And that’s good news for you because this implies that you can actually create
 
 ## Features of ROS
 
-![Need for ROS](Need for ROS-1.png)
+![Need for ROS](Need_for_ROS-1.png)
