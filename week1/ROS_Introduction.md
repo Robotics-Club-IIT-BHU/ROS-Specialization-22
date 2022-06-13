@@ -12,3 +12,39 @@ And that’s good news for you because this implies that you can actually create
 ## Features of ROS
 
 ![Need for ROS](Need_for_ROS-1.png)
+
+![Need for ROS](Need_for_ROS-2.png)
+
+
+
+•	You’ll find a ROS Package for literally anything!
+
+
+•	Easy communication between multiple language nodes (Python, C++, Java, etc) Great Simulation Tools
+
+
+•	Simulate multiple robots with ROS 
+
+
+•	ROS doesn’t occupy much space.
+
+
+•	ROS Software is open source and free to use.
+
+
+•	Growing user base, making ROS more prominent in near future.
+
+
+ROS is the most mature, open source robotics project in the world. So if you are planning to get into robotics, you need to master it. 
+In the next section, we are going to move onto the problem of 
+[installing ROS](https://github.com/Robotics-Club-IIT-BHU/ROS-Specialization-22/blob/main/week1/Installation.md).
+
+
+ROS is complex. ROS takes time. But the end result is fruitful.
+
+
+**NOTE: We would always prefer you to look up 
+[ros wiki](http://wiki.ros.org/Documentation)
+and 
+[ros answers](https://answers.ros.org/questions/)
+as they containing literally everything from where most of us have learnt ROS.**
