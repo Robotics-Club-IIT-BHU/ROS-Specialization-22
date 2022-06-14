@@ -29,7 +29,7 @@ cd /catkin ws/
 
 catkin build
 
-source deveI/setup.bash
+source devel/setup.bash
 ```
 
 
@@ -64,12 +64,14 @@ more robust and supports mutltiple package type to be built together ( orocos, n
  
 $ rm -r build/*
 $ rm -r devel/*
-```
+```  
+which basically deletes the build and devel folders  
+
 Then Install catkin tools For Ubuntu
 
 ```bash
 $ sudo apt-get update
-$ sudo apt-get install python-catkin-tools
+$ sudo apt-get install python3-catkin-tools
 ```
 For others (depreciated)
 
