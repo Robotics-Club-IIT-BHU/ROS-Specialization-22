@@ -3,6 +3,8 @@
 <p align="center" style="background-color: rgb(250,250,250)">
 <img src="https://github.com/Robotics-Club-IIT-BHU/ROS-Specialization-22/blob/main/media/ROS_Intro.png"/>
 </p>
+<br>
+<br>  
 
 ## What is ROS(Robot Operating System)?
 
@@ -12,7 +14,8 @@ Oh, wait! It is also technically not an operating system. ROS is an OS only in c
 all the hardware of the robot.
 
 And that’s good news for you because this implies that you can actually create programs for robots without having to deal with the hardware. Cool right!
-
+<br>  
+<br>  
 ## Features of ROS
 
 <p align="center" style="background-color: rgb(250,250,250)">
