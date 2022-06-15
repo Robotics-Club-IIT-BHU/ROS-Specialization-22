@@ -45,7 +45,9 @@ And that’s good news for you because this implies that you can actually create
 
 ROS is the most mature, open source robotics project in the world. So if you are planning to get into robotics, you need to master it. 
 In the next section, we are going to move onto the problem of 
-[installing ROS](https://github.com/Robotics-Club-IIT-BHU/ROS-Specialization-22/blob/main/week1/Installation.md).
+[installing ROS](https://github.com/Robotics-Club-IIT-BHU/ROS-Specialization-22/blob/main/week1/Installation.md).  
+<br>
+Once you are done with the installation you have two options either head to [course](https://github.com/Robotics-Club-IIT-BHU/ROS-Specialization-22/blob/main/week1/Learning%20through%20course.md) **OR** [our content](https://github.com/Robotics-Club-IIT-BHU/ROS-Specialization-22/blob/main/week1/Learning%20from%20ros%20wiki.md)
 
 
 ROS is complex. ROS takes time. But the end result is fruitful.
