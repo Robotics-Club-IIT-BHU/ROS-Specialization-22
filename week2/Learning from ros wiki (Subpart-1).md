@@ -97,3 +97,5 @@ P.S. -> We are not going indepth of the underlying code(As our aim is to give yo
  - [Learning Urdf Step by Step](http://wiki.ros.org/urdf/Tutorials) - Here you will learn how to visualise your Urdfs in Rviz. **Just Follow the steps as mentioned there and try to Run locally-> Learning URDF Step by Step Tutorial for first three section till now(Upto- Adding Physical and Collision Properties to a URDF Model).**
    
  - TF from ROS wiki [[1]](http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf) , [[2]](http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28C%2B%2B%29), [[3]](http://wiki.ros.org/tf/Tutorials/Adding%20a%20frame%20%28C%2B%2B%29), [[4]](http://wiki.ros.org/tf/Tutorials/tf%20and%20Time%20%28C%2B%2B%29),, [[5]](http://wiki.ros.org/tf/Tutorials/Time%20travel%20with%20tf%20%28C%2B%2B%29) Go through all these tutorials to get a good understanding of tf
+
+ **We also have a task for you on what you just learnt!! Head towards the [Task_1](https://github.com/harshmahesheka/ROS-Specialization-22/blob/main/week2/Task_1.md) Page.**
