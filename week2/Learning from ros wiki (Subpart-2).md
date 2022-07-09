@@ -96,12 +96,22 @@ At time 1657366985.951
 - If you are confused by what source_frame and target_frame are refer to [this](#useful-info-and-links)  
 
 ## What you will do  
-- You will be doing the same thing as above but through a python script. (Easier to grasp concepts in Python)
-- You will be printing out on the terminal the translation and rotational matrices of the **camera_link** from the **husky_robot_model__base_link**.  
-- Next you will be creating a new frame called **carrot** that will **always** be **1 metre** in front of husky on the XY plane.  
-- Print out the same matrices now of the **carrot** from the **camera_link** using your python script.  
-- Now that was a static frame you created, its time to make a dynamic frame, the **carrot** frame should always be at a distance of sin(ROS Time in secs)
+1. You will be doing the same thing as above but through a python script. (Easier to grasp concepts in Python)
+2. You will be printing out on the terminal the translation and rotational matrices of the **camera_link** from the **husky_robot_model__base_link**.  
+3. Next you will be creating a new frame called **carrot** that will **always** be **1 metre** in front of husky on the XY plane.  
+4. Print out the same matrices now of the **carrot** from the **camera_link** using your python script.  
+5. Now that was a static frame you created, its time to make a dynamic frame, the **carrot** frame should always be at a distance of sin(ROS Time in secs)
 in front of the base_link.  
+
+
+## Submission Instructions  
+- A screenshot of your Tf Tree with the urdf of Subpart 1  
+- The final python script that you created which includes printing the lookup of (camera_link from base_link) and publishing the dynamic carrot frame.
+-  Now run your python script and open up a new Terminal,
+```
+rosrun tf tf_echo husky_robot_model__base_link carrot
+```
+- A screenshot of the output of the above command. 
 
 ## Useful info and links  
 - [ ] The links given in the Tf section in Subpart 1 especially [this](http://wiki.ros.org/tf/Tutorials/Adding%20a%20frame%20%28C%2B%2B%29) :)
