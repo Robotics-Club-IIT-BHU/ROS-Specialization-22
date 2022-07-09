@@ -1,4 +1,4 @@
-# Welcome to the ROS Specialization Track!!  
+<h1 align="center"> Welcome to the ROS Specialization Track!! </h1>  
 <br>  
 <p align="center" style="background-color: rgb(250,250,250)">
 <img src="https://github.com/Robotics-Club-IIT-BHU/ROS-Specialization-22/blob/main/media/ROS_Intro.png"/>
