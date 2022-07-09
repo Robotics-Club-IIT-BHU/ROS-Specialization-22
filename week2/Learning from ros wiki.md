@@ -33,12 +33,14 @@ In Pybullet camp, you found an example of transformation i.e., **euler2quaternio
 In ROS, there is a separate package which handles transformations, but one might be thinking...
 
 <p align="center">
-<img width = 500 height=300 src = "../../assests/ask.jpeg">
+<img width = 500 height=300 src = "https://github.com/Robotics-Club-IIT-BHU/ROS-SummerCamp21/blob/final/assests/ask.jpeg?raw=true">
 </p>
 
 I will leave the answer on [Kostas Danillidis-Proff at University of Pennsylvania](https://www.coursera.org/lecture/robotics-perception/rotations-and-translations-eTSMz)
 
-In the video you can find how different transformations need to be considered just for a single camera. Now add to that the plethora of sensors you can use on your robot like LaserScan, Encoders, GPS, IMU and so on.  
+In the video you can find how different transformations need to be considered just for a single camera. Now add to that the plethora of sensors you can use on your robot like LaserScan, Encoders, GPS, IMU and so on. 
+<br>
+
 ROS Tf package is an abstraction which handles all transformations for you at all times. 
 
 To learn more thoroughly about it Refer [ROS-Wiki/tf](http://wiki.ros.org/tf).
@@ -50,25 +52,38 @@ Basically it helps you by providing a transformation (both rotation and translat
 
 ## Simple examples
 
-Let me give an example to which you can relate, take the husky robot you had in Pixelate and LaRoboLiga and just as in Pixelate imagine there is an overhead
-camera.   
+Let me give an example to which you can relate, take the husky robot you had in Pixelate and LaRoboLiga and just as in Pixelate imagine there is an overhead camera. 
+<br>
+<p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/patch-1/week2/media/Arena.png" width="50%"/></p>  
+<br> 
+
 Now imagine the camera to have one frame of reference and the husky robot to have a frame of reference **attached** to them.  
-With the help of ArUco markers you managed to get the **relative translation** in the **XY directions** and the **relative orientations** in the **Yaw** right.  
-So congrats you already know the root basics of Transformations.  
+With the help of ArUco markers you managed to get the **relative translation** in the **XY directions** and the **relative orientations** in the **Yaw**. 
+<br>  
+So congrats you already know the root basics of Transformations!!!.
+<br>  
+
 Now you might be thinking *ohh that was so easy*, but wait. Add translation in the Z axis along with orientation change in the Roll and Pitch too and things start getting complicated.
 
-This can still be done by hand with the help of some maths involving matrices. Check out these three videos part of a series for an in-depth understanding.  [Part-1](https://www.youtube.com/watch?v=xYQpeKYCfGs&t=1s)  [Part-2](https://www.youtube.com/watch?v=HOv2DTaw38U)  [Part-3](https://www.youtube.com/watch?v=_B3KsLkX_3A&t=2s).  
-Understanding the basics here is essential, to interact with the tf package. 
+This can still be done by hand with the help of some maths involving matrices. 
+<br>  
+Check out these three videos part of a series for an in-depth understanding: &emsp; [Part-1](https://www.youtube.com/watch?v=xYQpeKYCfGs&t=1s) &emsp; [Part-2](https://www.youtube.com/watch?v=HOv2DTaw38U) &emsp; [Part-3](https://www.youtube.com/watch?v=_B3KsLkX_3A&t=2s).  
+
 <br>
 
+**Complex Scenario**  
+- Now lets consider a complex case where the point of references are not stationary like in the robot given below.
+- Lets say we wanted to climb stairs, and we have the coordinates of the stairs from the Center of Mass of the robot.
+- If we have the task to keep only the front most leg on the stairs, We would need the coordinate of the stairs from the frame of reference of the toe.  
+- But this time the rotation and translation matrix is not constant like the previous examples as the position of the toe is changing relative to the Center of mass as the joint angles are changing. 
+- So keeping this in mind we have first compute the forward Kinematics of the toes and then compute the translation and rotation matrix which is very hard considering your system may have multiple joints and multiple end effectors.
+<br>
 
+**Sounds scary?? Chill, the Tf package has got you covered.**  
+<br> 
 
-- **Complex Scenario** : Now lets consider a complex case where the point of references are not stationary like in the robot given below lets say we wanted to climb stairs, And we have the coordinates of the stairs from the Center of Mass of the robot, If we have the task to keep only the front most leg on the stairs, We would need the coordinate of the stairs from the frame of reference of the toe.   
-
-But this time the rotation and translation matrix is not constant like the previous examples as the position of the toe is changing relative to the Center of mass as the joint angles are changing So keeping this in mind we have first compute the forward Kinematics of the toes and then compute the translation and rotation matrix which is very hard considering your system may have multiple joints and multiple end effectors.  
-Sounds scary?? Chill, the Tf package has got you covered.  
 <p align ="center">
-<img src = "stoch.png"><br/>
+<img src = "https://github.com/Robotics-Club-IIT-BHU/ROS-SummerCamp21/blob/final/Task2/Subpart1/stoch.png"><br/>
 </p>
 
 ## HANDS ON
@@ -91,7 +106,8 @@ From Pybullet camp, you are familiar with building urdfs(assuming only static mo
 - Build the package and resolve the errors you might get. :)
 - Now open up the models folder and under husky_robot_model you will find model.urdf, this is the urdf file you will be tweaking.  
 - To visualize it run the visualize.launch file located in the launch folder using
-``` roslaunch camp visualize.launch
+``` 
+roslaunch camp visualize.launch
 ```
 (camp is the name of the package)  
 - When Rviz opens up, change the fixed frame to husky_robot_model__base_link as this is the base link of the robot.  
@@ -111,7 +127,11 @@ From Pybullet camp, you are familiar with building urdfs(assuming only static mo
  ```
 - Relaunch Rviz and now you will see a gui panel with sliders using which you can check out your joint movements.
 <p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/patch-1/week2/media/Screenshot%20from%202022-07-09%2015-44-14.png" width="100%"><br><i>joint_publisher_gui</i></p>
+<br>
+
+### Useful Info
 - [ ] You can use this link for reference [Visualising urdf tutorial from ROS for your urdf](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch).  
-- [ ] Don't get confused between robot_state_publisher and joint_state_publisher. robot_state_publisher is an inbuilt node which sets up the **TF tree of the urdf** for you while using joint_state_publisher you can publish joint values to the joints.
+- [ ] Don't get confused between robot_state_publisher and joint_state_publisher. **robot_state_publisher** is an inbuilt node which sets up the **TF tree of the urdf** for you while using **joint_state_publisher** you can **publish joint values** to the joints.
+- [ ] Parameter "robot_description" stores the location of the urdf to load. There can only be one robot_description that can be viewed in Rviz at a time.
 
 Happy `build`ing!!
