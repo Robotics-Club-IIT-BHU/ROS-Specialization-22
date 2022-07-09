@@ -21,7 +21,7 @@ Before moving further, see these Videos for Rviz Introduction and feel
 
 
 Don't Worry if you don't understand few terms, you will learn about most of them as the camp progress. 
-If you are unable to understand how we represent two frames and how we translate between them see [Simple Example](#simple_examples) section first
+If you are unable to understand how we represent two frames and how we translate between them see [Simple Example](#simple-examples) section first
 <br>
 
 Before moving further with RViz, let's first learn about **tf or transforms(transformations)**.
