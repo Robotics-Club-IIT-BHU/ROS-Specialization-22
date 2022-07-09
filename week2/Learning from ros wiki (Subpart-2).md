@@ -72,4 +72,4 @@ We can provide you with a demonstration of rqt_plot using turtlesim package avai
 Well i know it is but you are now done with boring theory and can jump on using these things with your own robot!!!! 
 </p>
 
- **We again have a task for you on what you just learnt!! Head towards the [Task_1](https://github.com/harshmahesheka/ROS-Specialization-22/blob/main/week2/Task_2.md) Page.**
+ **We again have a task for you on what you just learnt!! Head towards the [Task_2](https://github.com/harshmahesheka/ROS-Specialization-22/blob/main/week2/Task_2.md) Page.**
