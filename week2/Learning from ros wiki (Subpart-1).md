@@ -130,7 +130,8 @@ roslaunch camp visualize.launch
 <br>
 
 ### Submission Instructions  
-- The modified Urdf file.
+- A screenshot of the **modified** urdf with the camera in Rviz showing all the link frames.  
+- The modified urdf file.
 - A small screen recording of the camera box revolute joint moving using the joint_publisher_gui. 
 
 ### Useful Info
