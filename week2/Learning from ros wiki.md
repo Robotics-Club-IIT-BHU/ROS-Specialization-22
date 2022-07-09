@@ -21,17 +21,16 @@ Before moving further, see these Videos for Rviz Introduction and feel
 
 
 Don't Worry if you don't understand few terms, you will learn about most of them as the camp progress. 
-If you are unable to understand how we represent two frames and how we translate between them see [Simple Example](#simple_example) section first
+If you are unable to understand how we represent two frames and how we translate between them see [Simple Example](#simple_examples) section first
 <br>
 
 Before moving further with RViz, let's first learn about **tf or transforms(transformations)**.
 
-<h2 align="center">tf</h2>
+<h2 align="center">Tf</h2>
 
 In Pybullet camp, you found an example of transformation i.e., **euler2quaternion** or **quaternion2euler**, but robotics is not just limited to it. 
-To learn more about transformations in real world with robotics see [This video from Maryland University](https://www.youtube.com/watch?v=olmAyg_mrdI&list=PLZgpos4wVnCYhf5jsl2HcsCl_Pql6Kigk&index=2&t=837s)
 
-In ROS, there is a seprate package which handles transformations, but one might be thinking...
+In ROS, there is a separate package which handles transformations, but one might be thinking...
 
 <p align="center">
 <img width = 500 height=300 src = "../../assests/ask.jpeg">
@@ -39,7 +38,8 @@ In ROS, there is a seprate package which handles transformations, but one might 
 
 I will leave the answer on [Kostas Danillidis-Proff at University of Pennsylvania](https://www.coursera.org/lecture/robotics-perception/rotations-and-translations-eTSMz)
 
-In the video you can find how different transformations need to be consider just for a single camera. But real robotics applications not just limits to a camera but include sensors like [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit), [GPS](https://en.wikipedia.org/wiki/Global_Positioning_System), [LaserScan](https://en.wikipedia.org/wiki/Laser_scanning), [Encoders](https://www.encoder.com/article-what-is-an-encoder), and many more like this can be included, Hence to make all sensor synchronized ROS reduces the overhead of managing transformations differently but made a compact way of handling these through tf package. Additionally, it can be extended for joints, links transformations as well and allows you to view your entire robot urdf and all its parent and child frames using TF_ViewFrames. 
+In the video you can find how different transformations need to be considered just for a single camera. Now add to that the plethora of sensors you can use on your robot like LaserScan, Encoders, GPS, IMU and so on.  
+ROS Tf package is an abstraction which handles all transformations for you at all times. 
 
 To learn more thoroughly about it Refer [ROS-Wiki/tf](http://wiki.ros.org/tf).
 
@@ -57,44 +57,61 @@ With the help of ArUco markers you managed to get the **relative translation** i
 So congrats you already know the root basics of Transformations.  
 Now you might be thinking *ohh that was so easy*, but wait. Add translation in the Z axis along with orientation change in the Roll and Pitch too and things start getting complicated.
 
-This can still be done by hand with the help of some maths involving matrices. Check out these three videos part of a series for an in-depth understanding.  
+This can still be done by hand with the help of some maths involving matrices. Check out these three videos part of a series for an in-depth understanding.  [Part-1](https://www.youtube.com/watch?v=xYQpeKYCfGs&t=1s)  [Part-2](https://www.youtube.com/watch?v=HOv2DTaw38U)  [Part-3](https://www.youtube.com/watch?v=_B3KsLkX_3A&t=2s).  
 Understanding the basics here is essential, to interact with the tf package. 
 <br>
 
-[Part-1](https://www.youtube.com/watch?v=xYQpeKYCfGs&t=1s)  [Part-2](https://www.youtube.com/watch?v=HOv2DTaw38U)  [Part-3](https://www.youtube.com/watch?v=_B3KsLkX_3A&t=2s)
 
-- **Complex Scenario** : Now lets consider a complex case where the point of references are not stationary Like in the robot given below lets say we wanted to climb stairs, And we have the coordinates of the stairs from the Center of Mass of the robot, If we have the task to keep only the front most leg on the stairs, We would need the coordinate of the stairs from the frame of reference of the toe, But this time the rotation and translation matrix is not constant like the previous examples as the position of the toe is changing relative to the Center of mass as the joint angles are changing So keeping this in mind we have first compute the forward Kinematics of the toes and then compute the translation and rotation matrix which is very hard considering your system may have multiple joints and multiple end effectors , In all this case the TF package comes in handy
+
+- **Complex Scenario** : Now lets consider a complex case where the point of references are not stationary like in the robot given below lets say we wanted to climb stairs, And we have the coordinates of the stairs from the Center of Mass of the robot, If we have the task to keep only the front most leg on the stairs, We would need the coordinate of the stairs from the frame of reference of the toe.   
+
+But this time the rotation and translation matrix is not constant like the previous examples as the position of the toe is changing relative to the Center of mass as the joint angles are changing So keeping this in mind we have first compute the forward Kinematics of the toes and then compute the translation and rotation matrix which is very hard considering your system may have multiple joints and multiple end effectors.  
+Sounds scary?? Chill, the Tf package has got you covered.  
 <p align ="center">
 <img src = "stoch.png"><br/>
 </p>
 
 ## HANDS ON
 
-Only seeing something don't make you master in it. so let's try some things by yourselves...
+Time to get your hands dirty, clean rather coz the Tf package does all the dirty work for you. :)    
 
 Run below Packages Step by Step to get the flavour of Rviz and tf.
 
 P.S. -> We are not going indepth of the underlying code(As our aim is to give you a headstart on how these are useful and not telling about every knitty-gritty details), if one is willing he/she can go through it for better understanding
 
- - [Learning Urdf Step by Step](http://wiki.ros.org/urdf/Tutorials) - Although these concepts were taught in pybullet camp but here you will actually going to visulaise it in RViz-ROS. **Just Follow the steps as mentioned there and try to Run locally-> Learning URDF Step by Step Tutorial for first three section till now(Upto- Adding Physical and Collision Properties to a URDF Model).**
+ - [Learning Urdf Step by Step](http://wiki.ros.org/urdf/Tutorials) - Here you will learn how to visualise your Urdfs in Rviz. **Just Follow the steps as mentioned there and try to Run locally-> Learning URDF Step by Step Tutorial for first three section till now(Upto- Adding Physical and Collision Properties to a URDF Model).**
    
  - TF from ROS wiki [[1]](http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf) , [[2]](http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20broadcaster%20%28C%2B%2B%29), [[3]](http://wiki.ros.org/tf/Tutorials/Adding%20a%20frame%20%28C%2B%2B%29), [[4]](http://wiki.ros.org/tf/Tutorials/tf%20and%20Time%20%28C%2B%2B%29),, [[5]](http://wiki.ros.org/tf/Tutorials/Time%20travel%20with%20tf%20%28C%2B%2B%29) Go through all these tutorials to get a good understanding of tf
        
 
 ## Task for this Subpart
 
-From Pybullet camp, you are familiar with building urdfs(assuming only static models). In this task your aim is to build the geometrical tags for the below robot(Original Version developed by RoboREG-adversarial_cars team [here](https://github.com/Robotics-Club-IIT-BHU/gym-adversarial-cars/tree/main/adversarial-gym/adversarial_cars/envs/rsc/car)) and visulaise it in RViz and debug there.
-<p align ="center">
-<img width = 400 height=300 src = "https://github.com/Robotics-Club-IIT-BHU/gym-adversarial-cars/blob/main/media/auto.png"><br/>
-<b>Credits for this URDF- gym-adversarial_cars team - RoboREG</b>
-</p>
+From Pybullet camp, you are familiar with building urdfs(assuming only static models). In this task: 
+- Download the folder [camp](/) and inside this package you will see three folders launch, models, worlds.  
+- Build the package and resolve the errors you might get. :)
+- Now open up the models folder and under husky_robot_model you will find model.urdf, this is the urdf file you will be tweaking.  
+- To visualize it run the visualize.launch file located in the launch folder using
+``` roslaunch camp visualize.launch
+```
+(camp is the name of the package)  
+- When Rviz opens up, change the fixed frame to husky_robot_model__base_link as this is the base link of the robot.  
+- Now add the RobotModel using the Add button and now you should see be able to see the robot.  
+<br>
 
-- [ ] You can use the above link to access the urdf and use this link [Visulaising urdf tutorial from ROS for your urdf](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch) to get started with visualizing it. The next task is to setup TF with this urdf [TF with Robot](http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF), Here they have used a laser but what i need you to do is setup tf from baselink to each wheels.
+### What you have to do (Task 1):  
+- Study the launch file first and get an idea of what is happening.  
+- Now add a **fixed box** to the top of the rod which will serve as the camera, by adding a new link and joint in the urdf file.  
+<p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/patch-1/week2/media/Screenshot%20from%202022-07-09%2015-35-19.png" width="100%"><br><i>Something like this</i></p>
 
-- [ ] After setting up Tf to test it out you have to print the coordinates, and orientation (prefered in euler angles) of the point [1,1,0] from 3 different frame of references (i.e., From the baselink, from left wheel, from right wheel) you may choose to add more frames but in the submission of this task you have to make a clear video while demonstrating your code running and the urdf spawnned on RVIZ. We strictly prefer the use of TF to complete this task but you are more than welcome to do it by hand but it is neccesary for using TF for the next task. 
+- Add the Tf modal using the Add button to see the frames as shown in the above picture.  
+- Now instead of a fixed joint use a **revolute** joint to attach the box.  
+- To check the movement of the joint go to the launch file and replace the joint_state_publisher line with this
+ ``` 
+ <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" output="screen" />
+ ```
+- Relaunch Rviz and now you will see a gui panel with sliders using which you can check out your joint movements.
+<p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/patch-1/week2/media/Screenshot%20from%202022-07-09%2015-44-14.png" width="100%"><br><i>joint_publisher_gui</i></p>
+- [ ] You can use this link for reference [Visualising urdf tutorial from ROS for your urdf](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch).  
+- [ ] Don't get confused between robot_state_publisher and joint_state_publisher. robot_state_publisher is an inbuilt node which sets up the **TF tree of the urdf** for you while using joint_state_publisher you can publish joint values to the joints.
 
-- [ ] After you have used TF we just want you to submit the pdf generated using TF Frames, whos syntax can be found here.[Debugging tools](https://wiki.ros.org/tf/Debugging%20tools)
-
-Happy `make`ing!!
-
-Submission for all this task would be on 22 July EOD (Not negotiable).
+Happy `build`ing!!
