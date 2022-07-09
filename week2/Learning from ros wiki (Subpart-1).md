@@ -129,6 +129,10 @@ roslaunch camp visualize.launch
 <p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/patch-1/week2/media/Screenshot%20from%202022-07-09%2015-44-14.png" width="100%"><br><i>joint_publisher_gui</i></p>
 <br>
 
+### Submission Instructions  
+- The modified Urdf file.
+- A small screen recording of the camera box revolute joint moving using the joint_publisher_gui. 
+
 ### Useful Info
 - [ ] You can use this link for reference [Visualising urdf tutorial from ROS for your urdf](http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch).  
 - [ ] Don't get confused between robot_state_publisher and joint_state_publisher. **robot_state_publisher** is an inbuilt node which sets up the **TF tree of the urdf** for you while using **joint_state_publisher** you can **publish joint values** to the joints.
