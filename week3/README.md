@@ -1,9 +1,8 @@
 # Subpart-1
+<h2 align="center"> Gazebo</h2>
 
-## Gazebo
-
-<p align="center"> <img src="gazebo_img.jpeg"/> <i><u>A Screen shot of Gazzebo</u></i>
-</p
+<p align="center"> <img src="https://www.clearpathrobotics.com/assets/guides/kinetic/moose/_images/moose_simulator_gazebo.png"/> <i><u>A Screen shot of Gazebo</u></i>
+</p>
 
 In this subpart we will learn about Gazebo. Gazebo is a 3D dynamic simulator just like Pybullet with the ability to accurately and efficiently simulate populations of robots in complex indoor and outdoor environments. While similar to game engines, Gazebo offers physics simulation at a much higher degree of fidelity, a suite of sensors, and interfaces for both users and programs.
 
@@ -113,16 +112,17 @@ gazebo
 
 You can see gazebo window and a bot spawned in it. Something similar to this.
 
-![gazebo1](../gazebo1.png)
+<p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/main/week3/media/Screenshot%20from%202022-07-16%2003-13-05.png?raw=true"/></p>
+<br>  
 
 ### If (you can see robot spawned) :
       then go ahead.
 ### Else:
 
-<div align="center">
-    <img src="../debug-time.jpg" width=40%/>
-</div>
-
+<p align="center">
+    <img src="https://c.tenor.com/pPKOYQpTO8AAAAAM/monkey-developer.gif" width=500/><br><b>Debug Time</b>
+</p>
+<br>  
 
 
 - Now fire up another terminal and run the following command in it
@@ -194,10 +194,15 @@ In teleop_twist_keyboard, its the same, you publish to the cmd_vel topic, so if 
     </sensor>
   </gazebo>
 ```
+
 - Thats it our urdf is ready, now get ready to visualize everything. Excited??
 - Launch visualize.launch again and in Rviz using the add by topic option add the **image** topic and **Odometry**. Also add the axes from display type and change fixed frame to husky_robot_model__base_link.  
-(Again note odom topic was used in the urdf skid_steer_drive plugin :wink:)
-<p align="center"><img src=""/></p>  
+(Again note odom topic was used in the urdf skid_steer_drive plugin :wink:)  
+
+<p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/main/week3/media/Screenshot%20from%202022-07-16%2003-14-31.png?raw=true"/><br><br>  <br><br>
+    <img src="https://github.com/san2130/ROS-Specialization-22/blob/main/week3/media/Screenshot%20from%202022-07-16%2003-14-11.png?raw=true"/></p>  
+<br>
+
 
 
 ### Getting feed from the Camera
@@ -217,14 +222,15 @@ Using this you can easily access the camera image and apply opencv functions on 
 
 ### Controlling the robot using OpenCV
 
-After getting the input of the camera from overhead camera we can roughly control the robot with this data as we have `/joint_states` from the controller and it is not difficult for one to calculate the position of the robot using the angles of the wheels.
-
-**L1 = R*O1** where L1 is the distance travelled by COM of Wheel1 where R is radius and O1 is the angle rotated got from the `/joint_states`.
-
-**Note: This is just a good model in a simulator where you have exact value about the angle but in real world this is very erroneous**
+We can roughly control the robot with the odomtery data from the odom topic which gives the xyz position,orientation and twist velocity.  
+  
+**Note: This is just a good model in a simulator where you have exact value about the angle but in real world using odometry data is very erroneous as the encoder sensor readings keep drifting over time.**
 
 ## Task-Time
 This is a task very similar to what you did in LaRoboLiga.  
+- In your launch file, launch the box_world.world. 
 - Find the blue box, take husky to it and stop a few centimetres before the box.
 - Submit a screen recording of husky completing the task.  
+
+<p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/main/week3/media/Screenshot%20from%202022-07-16%2003-18-33.png"/><br><b>Enjoy!!!</b> :wink: </p>
 
