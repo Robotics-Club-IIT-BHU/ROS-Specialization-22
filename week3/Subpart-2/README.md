@@ -1,5 +1,6 @@
-# Subpart-2
-<h2 align="center"> Navigation Stack </h2>
+<h1 align="center"> Subpart-2 </h1><br>
+
+# Navigation Stack
 
 ## Follow-along Tasks
 
@@ -69,23 +70,23 @@ Here's what ROS wiki [says](http://wiki.ros.org/navigation).
 Let me say the same thing to you in absolute layman terms. 
 - Basically the nav stack is just another [package](https://github.com/ros-planning/navigation) 
 - Behind controlling every robot in mapped environment, there are 3 things:
-   1. Localization (estimate the position of the robot in its surrounding w.r.t to some global frame) with the help of various sensors like camera, Lidar, IMU, encoders(odometry)
-   2. A path planner that claculates the path to follow form current position to the goal.
-   3. A controller that gives the appropriate torque command to the wheels for the bot to follow its path.
+   1. **Localization** (estimate the position of the robot in its surrounding w.r.t to some global frame) with the help of various sensors like camera, Lidar, IMU, encoders(odometry)
+   2. **A path planner** that claculates the path to follow from current position to the goal.
+   3. A **controller** that gives the appropriate torque command to the wheels for the bot to follow its path.
 - The nav stack package does all of this for you. It takes in the Lidar scans and the odometry data and processes them all the time to constantly localize the bot.  
 - It also has pre-written path planners like NavFn, TEB and DWA. 
 - Further it also gives the final appropriate torque command to all the joints for the robot to follow the above path using the move_base package.  
 - This is what you will be able to do after setting up nav stack. [working](https://www.youtube.com/watch?v=V32rff0pQy4)
-- Basially once you have a map, you can command the bot to go anywhere in the map and it will take the shortest path without any obstacles and reach the goal.
+- Basially once you have a map, you can command the bot to go anywhere in the map and it will take the **shortest path without any obstacles** and reach the goal.
 
 ## Task-Time
 - We want you to setup the nav stack on husky by yourself, the only way to be confident in it. :smiley: 
 - This is the nav stack [package](https://github.com/ros-planning/navigation) which you can clone or install it using sudo.  
-- First you will have to map the environment using the [slam_gmapping](http://wiki.ros.org/gmapping) package and save the map created. 
-- Then all you have to do is create a launch file and then launch [amcl](http://wiki.ros.org/amcl) for localization and [move_base](http://wiki.ros.org/move_base) for movement, which takes a global planner and a local planner(try out different planners and choose the best) as inputs and numerous other tunable parameters.  
-- Now since the nav stack can be applied to any robot, there are a gazillion paramters you have to custom tune using hit-and-trial. It's time to learn Dynamic_Reconfigure.
+- First you will have to **map the environment** using the [slam_gmapping](http://wiki.ros.org/gmapping) package and save the map created. 
+- Then all you have to do is create a launch file and then launch [amcl](http://wiki.ros.org/amcl) for **localization** and [move_base](http://wiki.ros.org/move_base) for **movement**, which takes a global planner and a local planner(try out different planners and choose the best) as inputs and numerous other tunable parameters.  
+- Now since the nav stack can be applied to any robot, there are a gazillion paramters you have to custom tune using hit-and-trial. It's time to learn **Dynamic_Reconfigure**.
 <details>
-<summary>Dynamic Reconfigure</summary>
+    <summary><b>Dynamic Reconfigure</b></summary>
 <br>
     <h2> Dynamic Reconfigure</h2>  
 I guess you already know what this does - instead of manually tuning parameters ike PID constants for example, by stopping and restarting the simulation very time, you can directly change those parameters online, **on-the-fly**.  (Makes our life so so much easier :sweat_smile:)  
@@ -107,9 +108,9 @@ Now you should be able to see tunable nodes on the left, click on them and you w
 ## Submission instructions  
 Give the husky a goal point within the map and record a video of husky reaching the goal. (upto whatever best you could achieve, partially working allowed)
 
+**Phew!! That was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:** <br>
 ## Useful Resources  
 - [The Construct](https://www.youtube.com/channel/UCt6Lag-vv25fTX3e11mVY1Q)  (Most useful channel for ROS, covers almost everytihng)
 - [SLAM Map Building with TurtleBot](http://wiki.ros.org/turtlebot_navigation/Tutorials/Build%20a%20map%20with%20SLAM)
 - [Autonomous Navigation of a Known Map with TurtleBot](http://wiki.ros.org/turtlebot_navigation/Tutorials/Autonomously%20navigate%20in%20a%20known%20map)
-
-**Phew!! That was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:**  
+ 
