@@ -68,7 +68,7 @@ And in Rviz you will see red dots, these are the objects reflecting back the las
 Here's what ROS wiki [says](http://wiki.ros.org/navigation).  
 Let me say the same thing to you in absolute layman terms. 
 - Basically the nav stack is just another [package](https://github.com/ros-planning/navigation) 
-- Behind controlling every robot there are 3 things:
+- Behind controlling every robot in mapped environment, there are 3 things:
    1. Localization (estimate the position of the robot in its surrounding w.r.t to some global frame) with the help of various sensors like camera, Lidar, IMU, encoders(odometry)
    2. A path planner that claculates the path to follow form current position to the goal.
    3. A controller that gives the appropriate torque command to the wheels for the bot to follow its path.
@@ -76,6 +76,7 @@ Let me say the same thing to you in absolute layman terms.
 - It also has pre-written path planners like NavFn, TEB and DWA. 
 - Further it also gives the final appropriate torque command to all the joints for the robot to follow the above path using the move_base package.  
 - This is what you will be able to do after setting up nav stack. [working](https://www.youtube.com/watch?v=V32rff0pQy4)
+- Basially once you have a map, you can command the bot to go anywhere in the map and it will take the shortest path without any obstacles and reach the goal.
 
 ## Task-Time
 - We want you to setup the nav stack on husky by yourself, the only way to be confident in it. :smiley: 
@@ -87,4 +88,4 @@ Let me say the same thing to you in absolute layman terms.
 ## Submission instructions  
 Give the husky a goal point within the map and record a video of husky reaching the goal. (upto whatever best you could achieve, partially working allowed)
 
-**Phew that was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:**  
+**Phew!! that was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:**  
