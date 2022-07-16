@@ -66,20 +66,25 @@ And in Rviz you will see red dots, these are the objects reflecting back the las
 
 ## What is this ROS Navigation stack??  
 Here's what ROS wiki [says](http://wiki.ros.org/navigation).  
-Let me say the same thing to you in very simple terms. 
+Let me say the same thing to you in absolute layman terms. 
 - Basically the nav stack is just another [package](https://github.com/ros-planning/navigation) 
-- Behind controlling every robot there are two things:
+- Behind controlling every robot there are 3 things:
    1. Localization (estimate the position of the robot in its surrounding w.r.t to some global frame) with the help of various sensors like camera, Lidar, IMU, encoders(odometry)
    2. A path planner that claculates the path to follow form current position to the goal.
    3. A controller that gives the appropriate torque command to the wheels for the bot to follow its path.
 - The nav stack package does all of this for you. It takes in the Lidar scans and the odometry data and processes them all the time to constantly localize the bot.  
 - It also has pre-written path planners like NavFn, TEB and DWA. 
 - Further it also gives the final appropriate torque command to all the joints for the robot to follow the above path using the move_base package.  
+- This is what you will be able to do after setting up nav stack. [working](https://www.youtube.com/watch?v=V32rff0pQy4)
 
 ## Task-Time
-This is a task very similar to what you did in LaRoboLiga.  
-- In your launch file, launch the box_world.world. 
-- Find the blue box, take husky to it and stop a few centimetres before the box.
-- Submit a screen recording of husky completing the task.  
+- We want you to setup the nav stack on husky by yourself, the only way to be confident in it. :smiley: 
+- This is the nav stack [package](https://github.com/ros-planning/navigation) which you can clone or install it using sudo.  
+- First you will have to map the environment using the [slam_gmapping](http://wiki.ros.org/gmapping) package and save the map created. 
+- Then all you have to do is create a launch file and then launch [amcl](http://wiki.ros.org/amcl) for localization and [move_base](http://wiki.ros.org/move_base) for movement, which takes a global planner and a local planner(try out different planners and choose the best) as inputs and numerous other tunable parameters.  
+- If your implementation was correct, then on giving husky a goal using Rviz, it should reach it successfully.  
 
-<p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/main/week3/media/Screenshot%20from%202022-07-16%2003-18-33.png"/><br><b>Enjoy!!!</b> :wink: </p>
+## Submission instructions  
+Give the husky a goal point within the map and record a video of husky reaching the goal. (upto whatever best you could achieve, partially working allowed)
+
+**Phew that was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:**  
