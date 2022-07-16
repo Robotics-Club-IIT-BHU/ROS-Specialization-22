@@ -109,7 +109,7 @@ Give the husky a goal point within the map and record a video of husky reaching 
 
 ## Useful Resources  
 - [The Construct](https://www.youtube.com/channel/UCt6Lag-vv25fTX3e11mVY1Q)  (Most useful channel for ROS, covers almost everytihng)
-- [SLAM Map Building with TurtleBot] (http://wiki.ros.org/turtlebot_navigation/Tutorials/Build%20a%20map%20with%20SLAM)
+- [SLAM Map Building with TurtleBot](http://wiki.ros.org/turtlebot_navigation/Tutorials/Build%20a%20map%20with%20SLAM)
 - [Autonomous Navigation of a Known Map with TurtleBot](http://wiki.ros.org/turtlebot_navigation/Tutorials/Autonomously%20navigate%20in%20a%20known%20map)
 
 **Phew!! That was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:**  
