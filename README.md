@@ -57,4 +57,4 @@ ROS is complex. ROS takes time. But the end result is fruitful.
 [ros wiki](http://wiki.ros.org/Documentation)
 and 
 [ros answers](https://answers.ros.org/questions/)
-as they containing literally everything from where most of us have learnt ROS.**
+as they contain literally everything from where most of us have learnt ROS.**
