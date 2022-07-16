@@ -46,7 +46,7 @@
 ~/catkin_ws $ roslaunch camp visualize.launch
 ```
 
-Now in gazebo you will see a blue 3 quarter circle. This is the laser rays projecting out from the lidar.   
+Now in gazebo you will see a blue 3 quarter circle. These are the laser rays projecting out from the lidar.   
 
 <p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/main/week3/media/Screenshot%20from%202022-07-16%2003-39-46.png"/><br><br></p>
 
@@ -83,9 +83,24 @@ Let me say the same thing to you in absolute layman terms.
 - This is the nav stack [package](https://github.com/ros-planning/navigation) which you can clone or install it using sudo.  
 - First you will have to map the environment using the [slam_gmapping](http://wiki.ros.org/gmapping) package and save the map created. 
 - Then all you have to do is create a launch file and then launch [amcl](http://wiki.ros.org/amcl) for localization and [move_base](http://wiki.ros.org/move_base) for movement, which takes a global planner and a local planner(try out different planners and choose the best) as inputs and numerous other tunable parameters.  
+- Now since the nav stack can be applied to any robot, there are a gazillion paramters you have to custom tune using hit-and-trial. It's time to learn [Dynamic_Reconfigure](
 - If your implementation was correct, then on giving husky a goal using Rviz, it should reach it successfully.  
 
 ## Submission instructions  
 Give the husky a goal point within the map and record a video of husky reaching the goal. (upto whatever best you could achieve, partially working allowed)
+
+## Dynamic Reconfigure  
+I guess you already know what this does - instead of manually tuning parameters ike PID constants for example, by stopping and restarting the simulation very time, you can directly change those parameters online, **on-the-fly**.  (Makes our life so so much easier :sweat_smile:)  
+  
+Fire up a terminal and open rqt  
+```bash
+rqt
+```  
+Now under the plugins tab -> Configuration -> Dynamic Reconfigure  
+<p align="center"><img src="https://github.com/san2130/ROS-Specialization-22/blob/main/week3/media/Screenshot%20from%202022-07-17%2002-01-24.png"/><br><i>Dynamic Reconfigure</i></p><br><br>
+
+Now you should be able to see tunable nodes on the left, click on them and you will find all the tunable parameters with sliders.  
+
+<p align="center"><img src="https://user-images.githubusercontent.com/6259829/62143462-50436500-b2f0-11e9-9812-6d105f8476bf.png"/></p><br><br>
 
 **Phew!! That was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:**  
