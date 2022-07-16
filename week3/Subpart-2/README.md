@@ -88,4 +88,4 @@ Let me say the same thing to you in absolute layman terms.
 ## Submission instructions  
 Give the husky a goal point within the map and record a video of husky reaching the goal. (upto whatever best you could achieve, partially working allowed)
 
-**Phew!! that was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:**  
+**Phew!! That was a lot you learnt in the first two subparts. We are thrilled to see your hardwork and effort. :clap: :clap:**  
