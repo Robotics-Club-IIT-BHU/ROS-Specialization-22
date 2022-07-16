@@ -40,7 +40,7 @@ gazebo
 
 ## Follow-along Tasks
 
-- We will be using the same package as in week 2 and we will make husky move in Gazebo.
+- We will be using the same package as in week 2, just **replace** the **worlds** folder in [camp](https://github.com/san2130/ROS-Specialization-22/tree/main/week2/camp) with [this](https://github.com/san2130/ROS-Specialization-22/tree/main/week3/Subpart-1/worlds) and we will make husky move in Gazebo.
 - If you have checked the urdf you will find 4 joints one for each wheel, now there are two options-
    1. Configure each joint by specifying the PID constants for each joint and tune them.  
    2. The easy way - simply use the skid_steer_drive plugin. We go with this way for now.  
