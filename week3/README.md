@@ -1,4 +1,4 @@
-# Subpart-1
+<h1 align="center">Subpart-1</h1>
 <h2 align="center"> Gazebo</h2>
 
 <p align="center"> <img src="https://www.clearpathrobotics.com/assets/guides/kinetic/moose/_images/moose_simulator_gazebo.png"/> <i><u>A Screen shot of Gazebo</u></i>
