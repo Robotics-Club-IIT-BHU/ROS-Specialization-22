@@ -69,7 +69,7 @@ And in Rviz you will see red dots, these are the objects reflecting back the las
 Here's what ROS wiki [says](http://wiki.ros.org/navigation).  
 Let me say the same thing to you in absolute layman terms. 
 - Basically the nav stack is just another [package](https://github.com/ros-planning/navigation) 
-- Behind controlling every robot in mapped environment, there are 3 things:
+- Behind controlling every robot in a mapped environment, there are 3 things:
    1. **Localization** (estimate the position of the robot in its surrounding w.r.t to some global frame) with the help of various sensors like camera, Lidar, IMU, encoders(odometry)
    2. **A path planner** that claculates the path to follow from current position to the goal.
    3. A **controller** that gives the appropriate torque command to the wheels for the bot to follow its path.
