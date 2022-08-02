@@ -103,7 +103,7 @@ Now you should be able to see tunable nodes on the left, click on them and you w
 <p align="center"><img src="https://user-images.githubusercontent.com/6259829/62143462-50436500-b2f0-11e9-9812-6d105f8476bf.png"/></p><br><br>
 </details>  
 
-- If your implementation was correct, then on giving husky a goal using Rviz, it should reach it successfully.  
+- If your implementation was correct, then on giving husky a goal using Rviz, it should reach it successfully. The better the tuning, the smoother the movement.    
 
 ## Submission instructions  
 Give the husky a goal point within the map and record a video of husky reaching the goal. (upto whatever best you could achieve, partially working allowed)
