@@ -17,7 +17,7 @@ Also, do check out this video demonstration to get an easier understanding of in
 **Commands to run in terminal:**
 
 ```bash
-mkdir -p /catkin ws/src
+mkdir -p ~/catkin_ws/src
 
 cd catkin_ws/src/
 
